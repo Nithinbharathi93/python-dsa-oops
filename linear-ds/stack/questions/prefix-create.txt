@@ -1,0 +1,24 @@
+Given an infix expression
+To find the prefix expression 
+reverse the expression
+swap the Brackets 
+find post fix 
+reverse the postfix expression 
+we got the prefix expression 
+
+Expression: (A+B)*C 
+Reverse: C*)B+A(
+Swapped: C*(B+A)
+
+read    stack   output
+C       -       C 
+*       *       C 
+(       *(      C 
+B       *(      CB 
++       *(+     CB 
+A       *(+     CBA
+)       *       CBA+
+END     -       CBA+*
+
+Postfix -> CBA+*
+Prefix -> *+ABC

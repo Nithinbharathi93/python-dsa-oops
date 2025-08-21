@@ -62,6 +62,7 @@ class LinkedList:
         while count<pos:
             count += 1
             temp = temp.next
+        print("Namma data",temp.data)
         new_node.next = temp.next
         temp.next = new_node
     
@@ -83,12 +84,7 @@ class LinkedList:
     
     def delete_at_pos(self, pos):
         prev = temp = self.head
-        # if pos<0: 
-        #     print("Enter a positie number")
-        #     return
-        # count = 1
-        # while count<pos:
-        while pos<0:
+        while pos-1>0:
             pos -= 1
             prev = temp
             temp = temp.next
@@ -96,31 +92,31 @@ class LinkedList:
         print("Deleted", temp.data)
 
 myLinkedList = LinkedList()
-# myLinkedList.insert(100)
-# myLinkedList.insert(200)
-# myLinkedList.insert(300)
-# myLinkedList.insert(400)
-# myLinkedList.insert(500)
-# myLinkedList.display()
+myLinkedList.insert(100)
+myLinkedList.insert(200)
+myLinkedList.insert(300)
+myLinkedList.insert(400)
+myLinkedList.insert(500)
+myLinkedList.display()
 
-# print(f"\nInserting {1} in beginning")
-# myLinkedList.insert_at_beginning(1)
-# myLinkedList.display()
-# print(f"\nInserting 2 at pos 3")
-# myLinkedList.insert_at_position(2, 3)
-# myLinkedList.display()
-# print(f"\nInserting 3 in the end")
-# myLinkedList.insert(3)
-# myLinkedList.display()
-# print("\nDeleting part")
-# myLinkedList.delete_first()
-# myLinkedList.display()
-# myLinkedList.delete_last()
-# myLinkedList.display()
-# myLinkedList.delete(300)
-# myLinkedList.display()
-# myLinkedList.delete_at_pos(3)
-# myLinkedList.display()
+print(f"\nInserting {1} in beginning")
+myLinkedList.insert_at_beginning(1)
+myLinkedList.display()
+print(f"\nInserting 2 at pos 3")
+myLinkedList.insert_at_position(2, 2)
+myLinkedList.display()
+print(f"\nInserting 3 in the end")
+myLinkedList.insert(3)
+myLinkedList.display()
+print("\nDeleting part")
+myLinkedList.delete_first()
+myLinkedList.display()
+myLinkedList.delete_last()
+myLinkedList.display()
+myLinkedList.delete(300)
+myLinkedList.display()
+myLinkedList.delete_at_pos(3)
+myLinkedList.display()
 
 # l = [1, 2, 3, 4, 5, 6, 7]
 
@@ -128,10 +124,7 @@ myLinkedList = LinkedList()
 #     myLinkedList.insert_at_beginning(i)
 # myLinkedList.display()
 
-# myLinkedList.insert_at_position(100, 4)
-# myLinkedList.display()
+myLinkedList.insert_at_position(100, 4)
+myLinkedList.display()
 
-# myLinkedList.insert(23)
-myLinkedList.display()
-myLinkedList.delete(None)
-myLinkedList.display()
+myLinkedList.insert(23)

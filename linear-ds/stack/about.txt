@@ -1,0 +1,10 @@
+Stack - LIFO
+Application: Calculator -> Works based on Law of Presidence and Associative
+
+Implemented using array (here, list)
+
+Underflow - Stack empty
+Overflow  - Stack full 
+push - Adding element to Stack
+top/peak - The element that is added lastly (most recently added element)
+pop - Removing element from the "top" of the Stack 

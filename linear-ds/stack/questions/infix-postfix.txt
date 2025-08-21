@@ -1,0 +1,120 @@
+Infix to Postfix
+1. Read the input string 
+2. Operands - Add it in output
+3. Operator - Push it into stack
+
+Pushing rule:
+if incoming operator has highest priority, push
+else, pop till that condition becomes true. Then push it.
+
+Brackets - Parantheses got the highest priority.
+push "(" once you get ")" pop everything till "("
+
+if incoming operator has equal priority, then pop and push
+
+
+Expression: (A+B)*C
+
+read    stack   output
+(       (       -
+A       (       A
++       (+      A
+B       (+      AB
+)       -       AB+
+*       *       AB+
+C       *       AB+C
+END     -       AB+C*
+
+Resulting Expression: AB+C*
+
+
+Example expression 1
+x*y*A+B 
+
+read    stack   output 
+x       -       x 
+*       *       x  
+y       *       xy 
+*       *       xy* 
+A       *       xy*A 
++       +       xy*A*
+B       +       xy*A*B 
+END     -       xy*A*B+ 
+
+Example expression 2
+A/B+C*D
+
+read    stack   output
+A       -       A
+/       /       A 
+B       /       AB 
++       +       AB/ 
+C       +       AB/C 
+*       +*      AB/C
+D       +*      AB/CD 
+END     -       AB/CD*+
+
+incoming - lower or equal priority - pop, push
+incoming - higher priority - push 
+
+Exponential operator is right associative - same priority, we don't pop
+a^b^C -> abc^^
+
+read    stack   output
+a       -       a 
+^       ^       a 
+b       ^       ab 
+^       ^^      ab 
+c       ^^      abc 
+END     -       abc^^
+
+default ah ve exponential ops are right associated. ie)
+3 ^ 1 ^ 2 => 3 ^ 1 => 3
+3 ^ 1 ^ 2 <==> 3 ^(1 ^ 2) 
+
+A+(B*C-(D/E^F)*G)*H 
+
+read    stack   output 
+A       -       A 
++       +       A 
+(       +(      A 
+B       +(      AB 
+*       +(*     AB 
+C       +(*     ABC 
+-       +(*-    ABC 
+(       +(*-(   ABC
+D       +(*-(   ABCD 
+/       +(*-(/  ABCD
+E       +(*-(/  ABCDE
+^       +(*-(/^ ABCDE
+F       +(*-(/^ ABCDEF
+)       +(*-    ABCDEF^/
+*       +(*-*   ABCDEF^/
+G       +(*-*   ABCDEF^/G 
+)       +       ABCDEF^/G*-*
+*       +*      ABCDEF^/G*-*
+H       +*      ABCDEF^/G*-*H
+END     -       ABCDEF^/G*-*H*+
+
+
+read    stack   output 
+A       -       A 
++       +       A 
+(       +(      A 
+B       +(      AB 
+*       +(*     AB 
+C       +(*     ABC 
+-       +(-     ABC* 
+(       +(-(    ABC*
+D       +(-(    ABC*D 
+/       +(-(/   ABC*D
+E       +(-(/   ABC*DE
+^       +(-(/^  ABC*DE
+F       +(-(/^  ABC*DEF
+)       +(-     ABC*DEF^/
+*       +(-*    ABC*DEF^/
+G       +(-*    ABC*DEF^/G 
+)       +       ABC*DEF^/G*-
+*       +*      ABC*DEF^/G*-
+H       +*      ABC*DEF^/G*-H
+END     -       ABC*DEF^/G*-H*+

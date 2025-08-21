@@ -1,0 +1,5 @@
+open brace - push
+close brace - pop
+if there is contradiction, break 
+else - proceed further
+if there is an excess in input string or stack, print invalid and exit 

@@ -1,0 +1,9 @@
+Tree is a hirarchical data structure
+Travesal - 2 Types
+
+Level-order Traversal = Root left right
+
+Depth first Search
+    - Inorder Traversal     => Left - [Root] - Right
+    - Preorder Traversal    => [Root] - Left - Right 
+    - Postorder Traversal   => Left - Right - [Root]

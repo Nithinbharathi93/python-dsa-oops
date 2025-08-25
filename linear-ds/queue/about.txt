@@ -1,0 +1,18 @@
+Queue 
+               Rear
+                |
+                V
+    -------------
+    1 2 3 4 5 6 7
+    -------------
+    ^
+    |
+  Front
+
+2 methods - enqueue and dequeue
+2 attributes - front and rear 
+
+FRONT in the first element, and REAR is the most recently added element
+
+enqueue - add element in the rear 
+dequeue - remove element from the front 

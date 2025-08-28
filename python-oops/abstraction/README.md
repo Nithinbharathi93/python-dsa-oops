@@ -1,5 +1,5 @@
-# Abstract Class
-## class that cannot be instantiated 
+## Abstract Class
+# class that cannot be instantiated 
 
  - They are ment to be sub classed 
  - They are supposed to be "Parent to Children" classes

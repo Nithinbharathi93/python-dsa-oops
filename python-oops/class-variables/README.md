@@ -1,5 +1,5 @@
-## Class Variable
-# class variable are sharde among all the instances
+# Class Variable
+## class variable are sharde among all the instances
 
 **instance variables** are defined within the init method
 **Class variable** is definde outside the init method

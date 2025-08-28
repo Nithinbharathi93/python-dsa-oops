@@ -1,5 +1,5 @@
-## Polymorphism
-# to have many forms 
+# Polymorphism
+## to have many forms 
 
 *2 ways*  
     - inheritance 

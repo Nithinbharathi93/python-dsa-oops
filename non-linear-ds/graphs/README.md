@@ -1,5 +1,5 @@
-## Graphs
-# combination of vertices and edges 
+# Graphs
+## combination of vertices and edges 
 
 **Usage** - Social media application
 
@@ -18,10 +18,10 @@ Island and Forest - Graph Concepts
 Group of Islands are called Forest 
 
 
-# Weighted graph and Non-weighted graph
+## Weighted graph and Non-weighted graph
 *Weighted Graph* - Every edge will have a cost
 
-# Cyclic and Acyclic Graph
+## Cyclic and Acyclic Graph
 *Cyclic graphs* - Cycles will be present in the graph
 *Acyclic graphs* 
     - Cycles will **not** be present in the graph

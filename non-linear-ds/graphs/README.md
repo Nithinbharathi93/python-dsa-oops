@@ -59,3 +59,21 @@ graph LR
 | B | 1 | 0 | 5 | 2 |
 | C | 3 | 5 | 0 | 1 |
 | D | 0 | 2 | 1 | 0 |
+
+
+## Graph Traversal
+
++ BFS
++ DFS
+
+**BFS** - Implemented using `Queue` <br>
+**DFS** - Implemented using `Stack`
+
+> [!NOTE]
+> In trees, we will be starting from root, but in graphs we can start from any node and the answer will change accordingly
+
+## BFS
++ Here we should start from any vertix and print the vertix
++ Then print (visit) the adjecent vertices
++ Then print (visit) their adjecent vertices
++ Ignore the vertices that are already visited

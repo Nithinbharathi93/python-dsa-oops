@@ -16,3 +16,13 @@ Island and Forest - Graph Concepts
 2. Disconnected / Non-Connected Graph: Few parts of the graphs are not connected in that condition, it is called Islands
 
 Group of Islands are called Forest 
+
+
+## Weighted graph and Non-weighted graph
+*Weighted Graph* - Every edge will have a cost
+
+## Cyclic and Acyclic Graph
+*Cyclic graphs* - Cycles will be present in the graph
+*Acyclic graphs* 
+    - Cycles will **not** be present in the graph
+    - All trees are *acyclic* graphs

@@ -77,3 +77,31 @@ graph LR
 + Then print (visit) the adjecent vertices
 + Then print (visit) their adjecent vertices
 + Ignore the vertices that are already visited
+
+### Original graph
+
+```mermaid
+graph LR
+    0 --- 1
+    0 --- 4
+    0 --- 5
+    1 --- 2
+    1 --- 5
+    5 --- 3
+    5 --- 4
+```
+
+### Spanning Graph
+```mermaid
+graph LR
+    0 --- 1
+    0 --- 4
+    0 --- 5
+    1 --- 2
+    5 --- 3
+```
+
+BFS Traversal: 
+0 -> [1, 4, 5]
+1 -> [2 ]
+5 -> [3 ]

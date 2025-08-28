@@ -7,7 +7,7 @@
 
  - Directed (Uni-directed graph) - Twitter 
  - Directed (Bi-directed graph) - Instagram
- - Undirectde Graph - LinkedIn
+ - Undirectde Graph - LinkedIn Connections
 
 Island and Forest - Graph Concepts
 

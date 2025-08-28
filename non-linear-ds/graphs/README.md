@@ -78,6 +78,11 @@ graph LR
 + Then print (visit) their adjecent vertices
 + Ignore the vertices that are already visited
 
+### Bookish definition
++ BFS starts from a node, write all of its adjecent nodes
++ From adjecents, pick one and write all of its adjecent node and repeat the same
++ If a node is already visited, don't visit it again.
+
 ### Original graph
 
 ```mermaid
@@ -102,6 +107,31 @@ graph LR
 ```
 
 BFS Traversal: 
-0 -> [1, 4, 5]
-1 -> [2 ]
-5 -> [3 ]
+0 -> [1, 4, 5] <br>
+1 -> [2 ] <br>
+5 -> [3 ] <br>
+
+## DFS
++ Here we shall start from any vertex from the graph
++ Then choose any one adjecent node and explore all the adjecent of adjecent.. vertices
++ Similar to *BFS* ignore all the repeating vertices
+
+### Bookish definition
++DFS start form a node, write any one of it's adjecent nodes
++For that node, check all adjecent node and write any one again, repeat the same
+> [!Note] 
+> At last add reset of the unvisited nodes
+
+### Given Directed Graph
+```mermaid
+graph LR
+    0 --> 1
+    0 --> 2
+    1 --> 3
+    1 --> 2
+    2 --> 3
+    3 --> 4
+    4 --> 0
+    4 --> 1
+    4 --> 5
+```

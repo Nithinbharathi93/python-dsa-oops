@@ -26,3 +26,26 @@ Group of Islands are called Forest
 *Acyclic graphs* 
     - Cycles will **not** be present in the graph
     - All trees are *acyclic* graphs
+
+## Graph representation:
+    - Adjacency Matrix
+    - Adjacency List
+
+Let there be a graph
+
+[1]--[2]--[3]--[4]
+
+*Adjacency Matrix*
+```python
+   _ 1   2   3   4 _
+1 |  0   1   0   0  |
+2 |  1   0   1   0  |
+3 |  0   1   0   1  |
+4 |_ 0   0   1   0 _|
+```
+
+|   | A | B | C | D |
+| A | 0 | 1 | 3 | 0 |
+| B | 1 | 0 | 5 | 2 |
+| C | 3 | 5 | 0 | 1 |
+| D | 0 | 2 | 1 | 0 |

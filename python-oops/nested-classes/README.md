@@ -1,5 +1,5 @@
-# Nested class
-## Class defined within another class 
+## Nested class
+# Class defined within another class 
 
 *benifits:*
     - allows logically grouping similar classes

@@ -24,7 +24,7 @@ class Pizza(Circle):
 
 shapes = [Circle(7), Square(5), Pizza("pepperoni", 5)]
 
-# Pizza is a Circle and a Shape - Polymorphism..!
+## Pizza is a Circle and a Shape - Polymorphism..!
 
 for i in shapes:
     print(f"{i.area()} sq cm")

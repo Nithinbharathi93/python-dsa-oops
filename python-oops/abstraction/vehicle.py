@@ -1,4 +1,4 @@
-from abc import ABC, abstractmethod # ABC - Abstract Base Class
+from abc import ABC, abstractmethod ## ABC - Abstract Base Class
 class Vehicle(ABC):
     
     @abstractmethod

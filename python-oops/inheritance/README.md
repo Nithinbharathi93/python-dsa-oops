@@ -1,6 +1,6 @@
-# Inheritance
-## A class can inherite attributes and method from another class 
-## Helps in reusability and maintainbility 
+## Inheritance
+# A class can inherite attributes and method from another class 
+# Helps in reusability and maintainbility 
 
 **multiple inheritance**
  - inherite attr from more than one immediate parents

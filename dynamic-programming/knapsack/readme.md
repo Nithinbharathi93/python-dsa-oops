@@ -1,13 +1,12 @@
 # Knapsack
+**Explanation**: Given with a sack with a capacity and a list of item with their induvidual occupancy. 
 
-## 2 Types
-
+### 2 Types
 * Fractional 
 * 0 or 1
 
-**Explanation**: Given with a sack with a capacity and a list of item with their induvidual occupancy. 
 
-**Example 1**
+## Example 1
 
 We are running a grossary shop. We have
 ```python
@@ -27,7 +26,7 @@ cost = { 3, 2, 6, 5, 2 } # induvidual cost for above itmes
 
 We need to fill a given sack so that we can get most price in returns with least amount to items sold.
 
-**Example 2**
+## Example 2
 
 You are a theif and you are going to steal in a shop.
 ```python
@@ -39,18 +38,8 @@ Let the _maximum no. of items_ that can be accomodated by the sack be 4
 
 Let the _maximum weight of items_ that can be accomodated by the sack be 8
 
-  .     |        | i\w   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
- ------ | -----  | ----- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
-**v[i]**|**w[i]**|   0   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-  2     |  3     |   1   | 0 | 0 | 0 | 2 | 2 | 2 | 2 | 2 | 2 |
-  3     |  4     |   2   | 0 | 0 | 0 | 2 | 3 | 3 | 3 | 5 | 5 |
-  4     |  5     |   3   | 0 | 0 | 0 | 2 | 3 | 4 | 4 | 5 | 6 |
-  1     |  6     |   4   | 0 | 0 | 0 | 2 | 3 | 4 | 4 | 5 | 6 |
-
-![alt text](image.png)
 
 **Formula:** `max( v[i] + dp[i-1][ W - wt[i-1]], dp[i-1][W] )`
-
 
 Here
 * _i_ = item
@@ -61,3 +50,18 @@ Here
 * _W_ = Maxmimum weight 
 * _dp_ = Previour row
 
+---
+
+
+  .     |        | i\w   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+ ------ | -----  | ----- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
+**v[i]**|**w[i]**|   0   | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+  2     |  3     |   1   | 0 | 0 | 0 | 2 | 2 | 2 | 2 | 2 | 2 |
+  3     |  4     |   2   | 0 | 0 | 0 | 2 | 3 | 3 | 3 | 5 | 5 |
+  4     |  5     |   3   | 0 | 0 | 0 | 2 | 3 | 4 | 4 | 5 | 6 |
+  1     |  6     |   4   | 0 | 0 | 0 | 2 | 3 | 4 | 4 | 5 | 6 |
+
+
+![alt text](image.png)
+
+Thus the maximum profit is **6**

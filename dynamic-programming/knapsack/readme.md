@@ -28,6 +28,7 @@ We need to fill a given sack so that we can get most price in returns with least
 
 ## Example 2
 
+### Question 
 You are a theif and you are going to steal in a shop.
 ```python
 items = { A, B, C, D }
@@ -39,7 +40,8 @@ Let the _maximum no. of items_ that can be accomodated by the sack be 4
 Let the _maximum weight of items_ that can be accomodated by the sack be 8
 
 
-**Formula:** `max( v[i] + dp[i-1][ W - wt[i-1]], dp[i-1][W] )`
+### Formula:
+`max( v[i] + dp[i-1][ W - wt[i-1]], dp[i-1][W] )`
 
 Here
 * _i_ = item
@@ -50,8 +52,7 @@ Here
 * _W_ = Maxmimum weight 
 * _dp_ = Previour row
 
----
-
+### Solution
 
   .     |        | i\w   | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
  ------ | -----  | ----- |-- |-- |-- |-- |-- |-- |-- |-- |-- |
@@ -64,4 +65,7 @@ Here
 
 ![alt text](image.png)
 
+### Answer
 Thus the maximum profit is **6**
+
+---

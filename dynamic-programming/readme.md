@@ -9,7 +9,7 @@ You are given wiht 10 choices and you can see all the possible solutions. Then w
 That __the best__ solution is **The Optimal Solution**.
 
 > [!IMPORTANT]
-> Dynamic programming will always offers you the best and omst optimal solution
+> **Dynamic programming will always offers you the best and omst optimal solution**
 
 ## Approachs
 * __Memorization approach__: We will solve once and use it again and again

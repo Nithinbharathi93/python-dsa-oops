@@ -18,3 +18,7 @@ That __the best__ solution is **The Optimal Solution**.
 ## Common Problem
 * Knapsack Problem
 * Fibonacci
+
+Tow important properties of Dynamic Programming are _Optimal Substructure_ and _Overlapping Sub-problems_
+* **Optimal Sub-Structure**: To divide the problems and finding the optimal solution for that particular sub problem.
+* **Overlapping Sub-problem**: Once a sub problem is solved and thus it can be **re-used** in other parts

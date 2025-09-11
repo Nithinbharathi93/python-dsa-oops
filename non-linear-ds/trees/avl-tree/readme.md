@@ -58,3 +58,12 @@ These nodes are called **Critical Node**. <br>
 > RL and LR are double rotations
 
 ## AVL Construction
+
+![alt text](image.png)
+
+**LL Rotation**:
+Means you have to do right rotation - towards right
+
+
+**RL Rotation**
+1. First do R rotation ( Left to Right ) - Rotate the 12 and 13 alone 

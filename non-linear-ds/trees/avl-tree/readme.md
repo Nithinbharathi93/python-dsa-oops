@@ -54,5 +54,5 @@ These nodes are called **Critical Node**
 * RL rotation - Right Left
 
 > [!NOTE]
-> RR and LL are single rotations
+> RR and LL are single rotations <br>
 > RL and LR are double rotations

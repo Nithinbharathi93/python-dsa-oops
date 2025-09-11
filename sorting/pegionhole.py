@@ -1,22 +1,20 @@
 arr = [5, 5, 3, 4, 1, 7, 4]
 tar = 4
 
+# Pegion sorting
+
 min_value = min(arr)
 max_value = max(arr)
-
 N = max_value - min_value
-
 hole = {i:[] for i in range(N+1)}
-
 for i in arr:
     hole[i-min_value].append(i)
-
 val_list = []
-
 for i in hole.values():
     val_list.extend(i)
-
 print(val_list)
+
+# 2 pointer target sum search
 
 left, right = 0, len(val_list)
 while (right >= 0):

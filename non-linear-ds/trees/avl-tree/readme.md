@@ -41,11 +41,9 @@ graph TD
 * 70's balance factor = 0-2 = -2
 * 75's balance factor = 0-1 = -1
 
-The nodes `50`, `60`, and `70` are confilicting with the AVL rules.
-
-These nodes are called **Critical Node**.
-
-**Reason:** The balance factor is not 0, 1, or -1.
+The nodes `50`, `60`, and `70` are confilicting with the AVL rules. <br>
+These nodes are called **Critical Node**. <br>
+**Reason:** The balance factor is not 0, 1, or -1. <br>
 
 
 ## AVL rotations

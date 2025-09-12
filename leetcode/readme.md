@@ -1,6 +1,7 @@
 # Leetcode Problems
 
 ## Problem 1 - Container With Most Water
+**Topic: Two Pointers**
 
 You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `ith` line are `(i, 0)` and `(i, height[i])`.
 
@@ -24,13 +25,10 @@ Notice that you may not slant the container.
 **Input**: height = [1,1] <br/>
 **Output**: 1
 
-The Python code you've provided, `maxArea`, solves the "Container With Most Water" problem. The goal is to find the two lines (from a given list of heights) that, along with the x-axis, form a container that can hold the most water.
-
 ### Problem Breakdown
 
 Imagine you have a series of vertical lines of varying heights. You want to pick two of these lines to form a container. The amount of water this container can hold is limited by the shorter of the two lines and the distance between them. The area is calculated as **height \* width**, where the height is the `min` of the two line heights and the width is the distance between them. The challenge is to maximize this area.
 
-\<br\>
 
 ### Solution
 
@@ -50,8 +48,6 @@ def maxArea(self, height: List[int]) -> int:
     return max_area
 ```
 
-\<br\>
-
 ### The Two-Pointer Approach
 
 The code uses a clever and efficient technique called the **two-pointer approach**. This method starts with two pointers, one at the very beginning (`left`) and one at the very end (`right`) of the `height` list.
@@ -62,7 +58,6 @@ The code uses a clever and efficient technique called the **two-pointer approach
 
 The code then enters a `while` loop that continues as long as the `left` pointer is to the left of the `right` pointer (`left < right`).
 
-\<br\>
 
 ### Step-by-Step Logic
 
@@ -76,3 +71,75 @@ Inside the loop, the algorithm performs these steps:
 
 The loop continues, calculating and comparing areas, until the pointers meet. By moving the shorter pointer, we strategically explore combinations that have the best chance of increasing the area, avoiding unnecessary calculations.
 
+
+## Problem 2 - Longest Substring Without Repeating Characters
+**Topic: Sliding Window**
+
+Given a string `s`, find the length of the longest substring without duplicate characters.
+
+ 
+ 
+**Example 1:** <br/>
+**Input**: s = "abcabcbb" <br/>
+**Output**: 3 <br/>
+**Explanation**: The answer is "abc", with the length of 3.
+
+
+**Example 2:** <br/>
+**Input**: s = "bbbbb" <br/>
+**Output**: 1 <br/>
+**Explanation**: The answer is "b", with the length of 1.
+
+
+**Example 3:** <br/>
+**Input**: s = "pwwkew" <br/>
+**Output**: 3 <br/>
+**Explanation**: The answer is "wke", with the length of 3.
+
+### The Sliding Window Approach
+
+The code uses a two-pointer technique to create a "window" that slides through the string.
+
+* `left` (left pointer): Marks the beginning of the current window.
+* `right` (right pointer): Marks the end of the current window.
+* `window`: A boolean array of size 128. This acts as a **hash set** to keep track of characters that are currently inside our window. The size 128 is chosen to cover the full range of ASCII characters. `window[ord(char)] = True` means the character `char` is in the window; `False` means it isn't.
+* `max_length`: Stores the maximum length found so far.
+
+### Solution
+
+```python
+def lengthOfLongestSubstring(self, s: str) -> int:
+    window = [False] * 128
+    left = right = 0
+    max_length = 0
+    while right < len(s):
+        curr_char = s[right]
+        if not window[ord(curr_char)]:
+            window[ord(curr_char)] = True
+            max_length = max(max_length, right - left + 1)
+            right += 1
+        else:
+            window[ord(s[left])] = False
+            left += 1
+    return max_length
+```
+
+### Step-by-Step Logic
+
+The code iterates through the string using the `right` pointer, expanding the window.
+
+1.  **Check for a New Character**: The `while` loop continues as long as the right pointer `right` is within the string's bounds. Inside the loop, it checks if the character at `s[right]` is already in the current window by looking at `window[ord(s[right])]`.
+    * `if not window[ord(s[right])]`: If the character is not in the window (it's `False`), it's a new, unique character.
+        * The character is added to the window by setting `window[ord(s[r])] = True`.
+        * The length of the current window (`right - left + 1`) is calculated and `max_length` is updated if the current length is greater.
+        * The window expands to the right by incrementing `right` (`right += 1`).
+
+2.  **Handle a Repeated Character**:
+    * `else`: If the character at `s[right]` is already in the window (it's `True`), it means we have a duplicate. To fix this, we need to shrink the window from the left.
+        * The character at the left pointer `s[left]` is removed from the window by setting `window[ord(s[left])] = False`.
+        * The left pointer is then moved one step to the right (`left += 1`). The loop will then re-check the character at `s[right]` in the next iteration.
+
+This process continues, expanding the window when a unique character is found and shrinking it when a duplicate is encountered. By using this sliding window technique, the code can find the longest substring in a single pass, giving it an efficient time complexity of O(n).
+
+
+## Problem 3 - 

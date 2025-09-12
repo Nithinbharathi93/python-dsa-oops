@@ -27,3 +27,31 @@ while (right >= 0):
     else:
         right -= 1
 print("Not found")
+
+
+'''
+
+# Alternative approach
+
+from collections import defaultdict
+
+arr = [5, 5, 3, 4, 1, 7, 4]
+
+temp_dict = defaultdict(bool)
+for i in arr:
+    temp_dict[i] = True
+
+min_value = min(arr)
+max_value = max(arr)
+N = max_value - min_value
+hole = {i:[] for i in range(N+1) if temp_dict[i+min_value]}
+for i in arr:
+    hole[i-min_value].append(i)
+val_list = []
+for i in hole.values():
+    val_list.extend(i)
+print(hole)
+# print(val_list)
+
+
+'''
